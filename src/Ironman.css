@@ -1,0 +1,7 @@
+.ironman {
+    height: 80vmin;
+    width: 60vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
