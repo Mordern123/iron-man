@@ -1,0 +1,83 @@
+.leg {
+    height: 43%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -5%;
+    z-index: -2;
+}
+
+.thigh {
+    height: 20%;
+    width: 29%;
+    background-color: #dc1f29;
+    border-radius: 1vmin;
+    outline: 2px solid #7d000f;
+}
+
+.calf {
+    height: 48%;
+    width: 12%;
+    position: absolute;
+    top: 12%;
+    background-color: #dc1f29;
+    border: 0.6vmin solid #7d000f;
+    transform-origin: top center;
+    z-index: 1;
+}
+
+.structure {
+    position: absolute;
+    width: 4vmin;
+    height: .7vmin;
+    background-color: #f7ba37;
+    top: -10%;
+}
+
+.calf-left .structure {
+    left: -4%;
+}
+
+.calf-right .structure {
+    right: -4%;
+}
+
+.calf-left {
+    border-radius: 3vmin 6vmin 2vmin 2vmin;
+    transform: rotateZ(10deg);
+    left: 35%;
+}
+
+.calf-right {
+    border-radius: 6vmin 3vmin 2vmin 2vmin;
+    transform: rotateZ(-10deg);
+    right: 35%;
+}
+
+.calf-left::before {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    border-left-width: 0;
+    border-radius: 10px 0 0 10vmin;
+    top: 30%;
+    right: -5%;
+    background-color: #f7ba37;
+    border: inherit;
+}
+
+.calf-right::before {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    border-left-width: 0;
+    border-radius: 0 10px 10vmin 0;
+    top: 30%;
+    left: -5%;
+    background-color: #f7ba37;
+    border: inherit;
+}

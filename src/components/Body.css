@@ -1,0 +1,198 @@
+.body {
+    height: 20%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -2%;
+    z-index: -1;
+}
+
+.trunk {
+    height: 100%;
+    width: 52%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dc1f29;
+    border-radius: 1vmin;
+    clip-path: polygon(0 0, 0 100%, 15% 100%, 20% 85%, 80% 85%, 85% 100%, 100% 100%, 100% 0);
+    z-index: -1;
+}
+
+.trunk::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 52%;
+    background-color: #7d000f;
+    /* border-radius: inherit; */
+    clip-path: polygon(0 0, 50% 0, 50% 3.75%, 3.2% 3.75%, 3.2% 96.25%, 13.4% 96.25%, 18.4% 81.25%, 81.6% 81.25%, 86.6% 96.25%, 96.8% 96.25%, 96.8% 3.75%, 50% 3.75%, 50% 0, 100% 0%, 100% 100%, 85% 100%, 80% 85%, 20% 85%, 15% 100%, 0 100%);
+}
+
+.shoulder-outline-right {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 25%;
+    width: 15%;
+    height: 15%;
+    background: #64030e;
+    transform: skewY(27deg);
+    transform-origin: top right;
+}
+
+.shoulder-outline-left {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 25%;
+    width: 15%;
+    height: 15%;
+    background: #64030e;
+    transform: skewY(-27deg);
+    transform-origin: top left;
+}
+
+.shoulder {
+    position: absolute;
+    height: 35%;
+    width: 20%;
+    top: 0;
+    background-color: #dc1f29;
+    border: 0.6vmin solid #7d000f;
+    border-radius: 100% 100% 2vmin 2vmin;
+    transform-origin: top center;
+    z-index: -2;
+}
+
+.shoulder-right {
+    right: 3%;
+    transform: translateX(-50%) rotateZ(-35deg);
+}
+
+.shoulder-left {
+    left: 3%;
+    transform: translateX(50%) rotateZ(35deg) rotateX(1deg);
+}
+
+.screw {
+    position: absolute;
+    width: 1.5vmin;
+    height: 1.5vmin;
+    border-radius: 50%;
+    background-color: #f7ba37;
+}
+
+.shoulder-left .screw {
+    top: 8px;
+}
+
+.shoulder-right .screw {
+    top: 8px;
+    right: 0;
+}
+
+.arm-left {
+    position: absolute;
+    z-index: -3;
+    top: 20%;
+    left: 15%;
+    height: 30%;
+    width: 16%;
+    background-color: #dc1f29;
+    transform: translateX(-50%) rotateZ(20deg);
+    border: 0.6vmin solid #7d000f;
+}
+
+.hand-left {
+    width: 8vmin;
+    height: 6vmin;
+    position: absolute;
+    top: 46%;
+    left: -2%;
+    border-radius: 100%;
+    border: 0.6vmin solid #7d000f;
+    background-color: #dc1f29;
+}
+
+.finger{
+    height: 90%;
+    width: 1.6vmin;
+    background-color: #dc1f29;
+    border: 0.4vmin solid #7d000f;
+    border-radius: 2.9vmin;
+    overflow: hidden;
+    position: absolute;
+    transform-origin: bottom center;
+    z-index: -1;
+}
+
+.finger::before {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 180%;
+    border-top: 0.5vmin solid #7d000f;
+    border-radius: 100%;
+    bottom: 25%;
+    left: -45%;
+}
+
+.finger-1 {
+    width: 2vmin;
+    transform: translate(3.8vmin, -45%) rotateZ(72deg);
+}
+
+.finger-2 {
+    transform: translate(4vmin, -70%) rotateZ(30deg);
+}
+.finger-3 {
+    transform: translate(2.8vmin, -80%) rotateZ(0);
+}
+.finger-4 {
+    transform: translate(1.4vmin, -70%) rotateZ(-30deg);
+}
+.finger-5 {
+    transform: translate(1vmin, -40%) rotateZ(-55deg);
+}
+
+.arm-right {
+    position: absolute;
+    z-index: -3;
+    top: 10%;
+    right: -8%;
+    height: 80%;
+    width: 16%;
+    background-color: #dc1f29;
+    transform: translateX(-50%) rotateZ(-30deg);
+    border: 0.6vmin solid #7d000f;
+}
+
+.arm-right::before {
+    content: "";
+    position: absolute;
+    height: 80%;
+    width: 60%;
+    border-left-width: 0;
+    border-radius: 0 0 10vmin 0;
+    left: -5%;
+    background-color: #f7ba37;
+    border: inherit;
+}
+
+.hand-right {
+    position: absolute;
+    z-index: 2;
+    top: 85%;
+    right: -20.5%;
+    height: 2vmin;
+    width: 20%;
+    background-color: #dc1f29;
+    border: 0.6vmin solid #7d000f;
+    border-radius: 2vmin 3vmin 3vmin 3vmin;
+    transform: translateX(-50%) rotateZ(-30deg);
+    transform-origin: top center;
+}

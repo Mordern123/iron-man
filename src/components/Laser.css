@@ -1,0 +1,8 @@
+.laser {
+    position: absolute;
+    height: 15vmin;
+    width: 80%;
+    background-image: linear-gradient(to bottom, #52fefe, rgba(111, 199, 233, 0.4) 50%, transparent);
+    left: 10%;
+    top: 102%;
+}
